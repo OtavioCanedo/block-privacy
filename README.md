@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gerenciador de Dados Descentralizados com Blockchain
 
-## Getting Started
+Este projeto é uma aplicação web que utiliza a tecnologia blockchain para permitir que os usuários acompanhem e gerenciem o uso de seus dados pessoais por terceiros. A aplicação oferece uma interface gráfica intuitiva para visualizar, em tempo real, quem acessou os dados, quando e com qual finalidade, além de exibir notificações sobre esses eventos.
 
-First, run the development server:
+## Funcionalidades Principais
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Visualização de Acessos aos Dados**: Exibe o total de acessos, o último acesso registrado, e as entidades que solicitaram acesso.
+- **Gráficos de Acessos**: Mostra a quantidade de acessos aos dados por mês em um gráfico interativo.
+- **Notificações em Tempo Real**: Os usuários são notificados sempre que seus dados forem acessados por terceiros.
+- **Tipos de Dados Acessados**: Detalha quais tipos de dados pessoais (como nome, email, endereço) foram acessados.
+- **Conformidade com a LGPD**: Garante que o sistema está em conformidade com as legislações de proteção de dados, como a LGPD (Lei Geral de Proteção de Dados).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Nextjs
+- Tailwindcss
+- Shadcn/ui
