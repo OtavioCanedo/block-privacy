@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import { Home, LogOut, Package, PanelBottom, User } from "lucide-react";
+import {
+  Blocks,
+  Home,
+  LogOut,
+  PanelBottom,
+  ShieldCheck,
+  User,
+} from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -26,13 +33,37 @@ export function Sidebar() {
               <TooltipTrigger asChild>
                 <Link
                   className="flex w-9 h-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
-                  href="#"
+                  href="/"
                 >
                   <Home className="h-5 w-5" />
                   <span className="sr-only">Início</span>
                 </Link>
               </TooltipTrigger>
               <TooltipContent side="right">Início</TooltipContent>
+            </Tooltip>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  className="flex w-9 h-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
+                  href="/leaks"
+                >
+                  <ShieldCheck className="h-5 w-5" />
+                  <span className="sr-only">Vazamento de dados</span>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent side="right">Vazamento de dados</TooltipContent>
+            </Tooltip>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  className="flex w-9 h-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
+                  href="/blockchain"
+                >
+                  <Blocks className="h-5 w-5" />
+                  <span className="sr-only">Blockchain</span>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent side="right">Blockchain</TooltipContent>
             </Tooltip>
           </TooltipProvider>
         </nav>
@@ -70,8 +101,8 @@ export function Sidebar() {
                   href="#"
                   prefetch={false}
                 >
-                  <Package className="h-5 w-5 transition-all" />
-                  <span className="sr-only">Logo do projeto</span>
+                  <User className="h-4 w-4" />
+                  <span className="sr-only">Avatar</span>
                 </Link>
 
                 <Link

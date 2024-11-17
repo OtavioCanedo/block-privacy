@@ -1,6 +1,7 @@
 import { Card } from "@/components/card";
 import { Building, Clock, Database, Eye, File } from "lucide-react";
 import { ChartOverview } from "@/components/chart";
+import { Template } from "@/components/template";
 // import { Sales } from "@/components/sales";
 
 export default function Home() {
@@ -59,11 +60,8 @@ export default function Home() {
   ];
 
   return (
-    <main className="sm:ml-14 p-4">
-      <h1 className="text-2xl md:text-3xl font-bold mb-10">
-        Gerenciador de Dados Descentralizados
-      </h1>
-      <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <Template title="Gerenciador de Dados Descentralizados">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {data.map((item, index) => (
           <Card key={index} {...item} />
         ))}
@@ -73,7 +71,7 @@ export default function Home() {
         <ChartOverview />
         {/* <Sales /> */}
       </section>
-    </main>
+    </Template>
   );
 }
 

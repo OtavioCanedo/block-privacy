@@ -93,3 +93,33 @@ body {
   }
 }
 
+/* Estilo geral da barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px; /* Largura da barra vertical */
+  height: 12px; /* Altura da barra horizontal */
+}
+
+/* Estilo da "trilha" da barra de rolagem (fundo) */
+::-webkit-scrollbar-track {
+  background: #f4f4f4; /* Cor do fundo */
+  border-radius: 10px; /* Borda arredondada */
+}
+
+/* Estilo da parte que se move (thumb) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Cor do "thumb" */
+  border-radius: 10px; /* Borda arredondada */
+  border: 3px solid #f4f4f4; /* Borda ao redor do thumb */
+}
+
+/* Estilo ao passar o mouse no "thumb" */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Cor ao passar o mouse */
+}
+
+/* Estilo no Firefox */
+html {
+  scrollbar-width: thin; /* Largura fina */
+  scrollbar-color: #888 #f4f4f4; /* Cor do thumb e da trilha */
+}
+
