@@ -43,7 +43,6 @@ export function ChartOverview() {
             />
             <YAxis tickLine={false} tickMargin={10} axisLine={false} />
             <Bar dataKey="access" fill={chartConfig.access.color} radius={4} />
-            {/* <Bar dataKey="mobile" fill={chartConfig.mobile.color} radius={4} /> */}
           </BarChart>
         </ChartContainer>
       }

@@ -107,11 +107,27 @@ export function Sidebar() {
 
                 <Link
                   className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
-                  href="#"
+                  href="/"
                   prefetch={false}
                 >
                   <Home className="h-5 w-5 transition-all" />
                   Início
+                </Link>
+                <Link
+                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                  href="/leaks"
+                  prefetch={false}
+                >
+                  <ShieldCheck className="h-5 w-5 transition-all" />
+                  Vazamento de dados
+                </Link>
+                <Link
+                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                  href="/blockchain"
+                  prefetch={false}
+                >
+                  <Blocks className="h-5 w-5 transition-all" />
+                  Blockchain
                 </Link>
               </nav>
             </SheetContent>

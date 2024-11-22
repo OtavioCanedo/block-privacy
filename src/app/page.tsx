@@ -1,8 +1,22 @@
+"use client";
+
 import { Card } from "@/components/card";
-import { Building, Clock, Database, Eye, File } from "lucide-react";
+import {
+  AlertCircle,
+  Bell,
+  Blocks,
+  Building,
+  ClipboardCheck,
+  Clock,
+  Database,
+  Eye,
+  File,
+} from "lucide-react";
 import { ChartOverview } from "@/components/chart";
 import { Template } from "@/components/template";
-// import { Sales } from "@/components/sales";
+import { DataAccess } from "@/components/dataAccess";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const data = [
@@ -17,7 +31,7 @@ export default function Home() {
       icon: <Clock className="h-4 w-4" />,
       description: "Último acesso registrado",
       content: (
-        <p className="text-base sm:text-lg font-bold">09/10/2024 12:00</p>
+        <p className="text-base sm:text-lg font-bold">25/11/2024 17:30</p>
       ),
     },
     {
@@ -45,19 +59,48 @@ export default function Home() {
       description: "Diferent tipos de dados acessados nos últimos 7 dias",
       content: (
         <div className="flex flex-wrap gap-2">
-          <span className="bg-blue-100 text-blue-800 text-base font-semibold mr-2 px-2 py-1 rounded-full">
+          <span className="bg-blue-100 text-blue-800 text-base font-semibold mr-2 px-3 py-2 rounded-full">
             Nome
           </span>
-          <span className="bg-green-100 text-green-800 text-base font-semibold mr-2 px-2 py-1 rounded-full">
+          <span className="bg-green-100 text-green-800 text-base font-semibold mr-2 px-3 py-2 rounded-full">
             Email
           </span>
-          <span className="bg-yellow-100 text-yellow-800 text-base font-semibold mr-2 px-2 py-1 rounded-full">
+          <span className="bg-yellow-100 text-yellow-800 text-base font-semibold mr-2 px-3 py-2 rounded-full">
             Endereço
           </span>
         </div>
       ),
     },
+    {
+      title: "Registros de Acessos",
+      icon: <ClipboardCheck className="h-4 w-4" />,
+      description: "Registros detalhados de acessos na blockchain",
+      content: (
+        <div>
+          <p className="text-base sm:text-lg font-bold">Total: 120 registros</p>
+          <ul className="list-disc list-inside text-sm">
+            <li className="text-base sm:text-lg font-bold">
+              ID: 9451 | 21/11/2024 14:32 | Consulta de Dados
+            </li>
+            <li className="text-base sm:text-lg font-bold">
+              ID: 1484 | 20/11/2024 10:15 | Compra Online
+            </li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      title: "Notificações Enviadas",
+      icon: <Bell className="h-4 w-4" />,
+      description: "Alertas sobre uso de dados enviados aos usuários",
+      content: (
+        <p className="text-base sm:text-lg font-bold">
+          30 notificações enviadas
+        </p>
+      ),
+    },
   ];
+  const router = useRouter();
 
   return (
     <Template title="Gerenciador de Dados Descentralizados">
@@ -69,7 +112,17 @@ export default function Home() {
 
       <section className="mt-4 flex flex-col md:flex-row gap-4">
         <ChartOverview />
-        {/* <Sales /> */}
+        <DataAccess />
+        <div className="flex flex-col gap-4">
+          <Button variant="link" onClick={() => router.push("/leaks")}>
+            <AlertCircle className="mr-2 h-4 w-4" />
+            Verificar Vazamento de Dados
+          </Button>
+          <Button variant="link" onClick={() => router.push("/blockchain")}>
+            <Blocks className="mr-2 h-4 w-4" />
+            Dados em Blockchain
+          </Button>
+        </div>
       </section>
     </Template>
   );
