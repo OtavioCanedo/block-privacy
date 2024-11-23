@@ -92,6 +92,7 @@ export default function Transactions() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#2563eb] font-semibold"
+                    title={block?.miner}
                   >
                     {shortenWallet(block?.miner)}
                   </Link>
@@ -128,6 +129,7 @@ export default function Transactions() {
                     target="_blank"
                     rel="noreferrer noopener"
                     className="text-[#ffc936] font-semibold"
+                    title={transaction?.hash}
                   >
                     {shortenWallet(transaction?.hash)}
                   </Link>
@@ -139,6 +141,7 @@ export default function Transactions() {
                     target="_blank"
                     rel="noreferrer noopener"
                     className="text-[#ffc936] font-semibold"
+                    title={transaction?.from}
                   >
                     {shortenWallet(transaction?.from)}
                   </Link>
@@ -149,6 +152,7 @@ export default function Transactions() {
                     target="_blank"
                     rel="noreferrer noopener"
                     className="text-[#ffc936] font-semibold"
+                    title={transaction?.to as string}
                   >
                     {shortenWallet(transaction?.to as string)}
                   </Link>
