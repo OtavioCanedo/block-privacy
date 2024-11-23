@@ -113,16 +113,6 @@ export default function Home() {
       <section className="mt-4 flex flex-col md:flex-row gap-4">
         <ChartOverview />
         <DataAccess />
-        <div className="flex flex-col gap-4">
-          <Button variant="link" onClick={() => router.push("/leaks")}>
-            <AlertCircle className="mr-2 h-4 w-4" />
-            Verificar Vazamento de Dados
-          </Button>
-          <Button variant="link" onClick={() => router.push("/blockchain")}>
-            <Blocks className="mr-2 h-4 w-4" />
-            Dados em Blockchain
-          </Button>
-        </div>
       </section>
     </Template>
   );
