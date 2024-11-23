@@ -73,6 +73,8 @@ export default function Transactions() {
                   <span>Número do bloco: </span>
                   <Link
                     href={`${baseUrl}block/${block?.number}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-[#2563eb] font-semibold"
                   >
                     {block?.number}
@@ -87,6 +89,8 @@ export default function Transactions() {
                   <span>Validado por: </span>
                   <Link
                     href={`${baseUrl}address/${block?.miner}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-[#2563eb] font-semibold"
                   >
                     {shortenWallet(block?.miner)}
@@ -96,6 +100,7 @@ export default function Transactions() {
                   <Link
                     href={`${baseUrl}/txs?block=${block?.number}`}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-500 text-sm"
                   >
                     {block?.length} transações
