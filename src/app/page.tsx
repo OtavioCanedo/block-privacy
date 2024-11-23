@@ -2,9 +2,7 @@
 
 import { Card } from "@/components/card";
 import {
-  AlertCircle,
   Bell,
-  Blocks,
   Building,
   ClipboardCheck,
   Clock,
@@ -15,8 +13,6 @@ import {
 import { ChartOverview } from "@/components/chart";
 import { Template } from "@/components/template";
 import { DataAccess } from "@/components/dataAccess";
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
 
 export default function Home() {
   const data = [
@@ -100,7 +96,6 @@ export default function Home() {
       ),
     },
   ];
-  const router = useRouter();
 
   return (
     <Template title="Gerenciador de Dados Descentralizados">
